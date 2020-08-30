@@ -1,5 +1,8 @@
 let colors = ["white", "black", "blue", "red", "yellow", "green"];
 
+let textA = document.createElement("input");
+textA.style.marginLeft = "10px";
+document.body.appendChild(textA);
 let div = document.createElement("div");
 div.id = "pallete";
 div.style.display = "flex";
@@ -15,6 +18,7 @@ for (let i = 0; i < colors.length; i++) {
     div.id = colors[i];
 
     pallete.appendChild(div); 
+    
 }
 
 pallete.style.marginLeft = window.innerWidth / 2 - colors.length * 50 / 2 + "px";
@@ -30,9 +34,14 @@ canvas.style.marginLeft = window.innerWidth / 2 - canvas.width / 2 + "px";
 canvas.style.marginTop = "50px";
 
 document.body.appendChild(canvas);
-
+document.body.appendChild(textA);
 
 let color = "black";
+
+let brushSize = 2;
+let prevX = prevY = 0;
+let currX = currY = 0;
+let isDraw = false;
 
 
 for (let i = 0; i < colors.length; i++ ) {
@@ -53,3 +62,44 @@ for (let i = 0; i < colors.length; i++ ) {
 
 }
 
+canvas.addEventListener('mouseup', function(event) {
+    isDraw = false;
+})
+canvas.addEventListener('mouseout', function(event) {
+    isDraw = false;
+})
+canvas.addEventListener('mousedown', function(event) {
+    isDraw = true;
+
+    if (textA.value != "") {
+        brushSize = textA.value;
+    }
+    prevX = currX;
+    prevY = currY;
+    currX = event.offsetX;
+    currY = event.offsetY;
+})
+canvas.addEventListener('mousemove', function(event) {
+    if (isDraw == true) {
+
+        prevX = currX;
+        prevY = currY;
+        currX = event.offsetX;
+        currY = event.offsetY; 
+        draw();
+    }
+})
+
+function draw() {
+    let context = canvas.getContext("2d");
+
+    context.beginPath();
+
+    context.moveTo(prevX, prevY);
+    context.lineTo(currX, currY);
+    context.strokeStyle = color;
+    context.lineWidth = brushSize;
+    context.stroke();
+
+    context.closePath();
+}
