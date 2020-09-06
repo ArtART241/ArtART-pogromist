@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Занятие final</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <form id="popitka" onsubmit="console.log(5+5)" action="">
+
+        <!-- Username -->
+        <label for="userName">enter your name</label> <br>
+        <input name="userName" id="userName" placeholder="your username" type="text"> <br>
+        <!-- Age -->
+        <label for="age">enter your age</label> <br>
+        <input name="age" id="age" placeholder="your age" type="number"> <br>
+        <!-- Selection -->
+        <input type="radio" id="check1" name="check" value="Web-Погромисты"><label for="check1">Web-Погромисты</label> <br>
+        <input type="radio" id="check2" name="check" value="Web-Войска"><label for="check2">Web-Войска</label> <br>
+        <input type="radio" id="check3" name="check" value="Улан"><label for="check3">Улан</label> <br>
+        <!-- Checkboxes -->
+        <div>Что ты любишь?</div>
+        <input type="checkbox" name="userLike" id="c1" value="cake"> <label for="c1">cake</label> <br>
+        <input type="checkbox" name="userLike" id="c2" value="cookie"> <label for="c2">cookie</label> <br>
+        <input type="checkbox" name="userLike" id="c3" value="banana"> <label for="c3">banana</label> <br>
+        <input type="checkbox" name="userLike" id="c4" value="apple"> <label for="c4">apple</label> <br>
+        <input type="checkbox" name="userLike" id="c5" value="peach"> <label for="c5">peach</label> <br>
+        <input type="submit" value="button">
+
+    </form>
+
+    <div id="story"></div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
