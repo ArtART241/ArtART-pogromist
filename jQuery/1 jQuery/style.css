@@ -1,0 +1,10 @@
+#field{
+    margin-left: 40%;
+}
+.circle{
+    border-radius: 50%;
+    border: solid 2px black;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
