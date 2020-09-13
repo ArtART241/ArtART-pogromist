@@ -16,7 +16,7 @@ function onSubmit(event) {
     // in development
     console.log("like: " + like);
 
-    let s = "Once in a beautiful world " + name + " went to grandma to get some cash. Even if he was " + age + " years old, he liked..."
+    let s = "Once in a beautiful world " + name + " went to grandma to get some cash. Even if he was " + age + " years old and came from " + from + ", it was worth it, because grandma had a lot of money. ";
     story.innerHTML = s;
 
 }
