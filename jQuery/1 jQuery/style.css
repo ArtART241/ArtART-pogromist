@@ -1,19 +1,19 @@
-#field{
+#snake{
     margin-left: 10%;
 }
+
 .circle{
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    border-radius: 15%;
+    width: 75px;
+    height: 75px;
     display: inline-block;
-    background-color: blue;
 }
 
-.lime{
-    background-color: lime !important;
-}
-
-.odd{
+.clicked{
     border-radius: 100% !important;
-    transition: 5s ease !important;
+    width: 50px !important;
+    height: 50px !important;
+    background-color: lime !important;
+    vertical-align: 50%;
 }
+

@@ -6,47 +6,32 @@ $(".circle").css("background-color")
 document.getElementsByClassName("circle")[0].style.backgroundColor;
 
 // JQUERY .css() - set
-$(".circle").css({
-    "background-color": "orange",
-    "border-radius": "15%"
-})
 
 $(".circle:nth-child(5)").css({
-    "background-color": "red"
+    "background": "red"
 })
 
 $(".circle:nth-child(2n)").css({
-    "background": "green"
+    "background": "orange"
 });
 
 $(".circle:nth-child(2n+1)").css({
-    "background": "cyan"
+    "background": "brown"
 });
 
 $(".circle:first-child").css({
-    "background": "pink"
+    "background": "black",
+    "border-radius": "25%"
 });
 
 $(".circle:last-child").css({
-    "background": "black"
-});
-
-$(".circle").click(function (event) { 
-
-    $(event.target).toggleClass("lime");
-
+    "background": "black",
+    "border-radius": "25%"
 });
 
 $(".circle:nth-child(2n+1)").click(function (event) { 
     
-    $(event.target).toggleClass("odd");
+    $(event.target).toggleClass("clicked");
     
 });
 
-// for (let i = 0; i < document.getElementsByClassName("circle").length; i++) {
-//     document.getElementsByClassName("circle")[i].style.backgroundColor = "orange";
-// }
-
-// document.addEventListener('click', function(event){
-
-// })
