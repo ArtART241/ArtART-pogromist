@@ -29,7 +29,7 @@ $(".circle:last-child").css({
     "border-radius": "25%"
 });
 
-$(".circle:nth-child(2n+1)").click(function (event) { 
+$(".circle:nth-child(2n)").click(function (event) { 
     
     $(event.target).toggleClass("clicked");
     
