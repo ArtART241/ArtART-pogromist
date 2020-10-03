@@ -1,8 +1,8 @@
 
-// create elements HTML using jQuery
+// creating HTML-elements using jQuery
 let img = $("<img>");
 
-// set one attribute
+// setting source attribute
 $(img).attr("src", "img/03.png");
 
 // appending to body
@@ -11,7 +11,7 @@ $("body").append(img);
 let rubashka = "img/01.png"
 
 function generateField(size) {
-    // resolution 175x²
+    // resolution 150x²
 
     let cards = new Array(size*size)
     cards.fill( $("<img>").attr({
@@ -22,9 +22,12 @@ function generateField(size) {
     }))
     
     let bigsize = cards.length * 100 + 16;
+    let windowwidth = (innerWidth - bigsize) / 2
+
+    $("#field").css("width", "windowwidth");
     
 
-
+    $("#field").prepend(cards);
     console.log(cards);
 }
 
@@ -40,7 +43,8 @@ $("#btn").click(function (event) {
         console.log("nice");
 
     } else {
-
+        size = size - 1
         console.log("nicht so tollè");
     }
+    generateField(size);
 });
