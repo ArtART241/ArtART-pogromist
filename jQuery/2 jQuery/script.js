@@ -11,7 +11,10 @@ $("body").append(img);
 let rubashka = "img/01.png"
 
 function generateField(size) {
-    // resolution 175x²
+  
+    // resolution 150x²
+    let gamesize = size * 150 + 16;
+    let place = (innerWidth - gamesize) / 2;
 
     let cards = new Array(size*size)
     cards.fill( $("<img>").attr({
@@ -21,7 +24,9 @@ function generateField(size) {
         "id": "rub"
     }))
     
-    let bigsize = cards.length * 100 + 16;
+    let bigsize = cards.length * 150 + 16;
+    
+    $("#field").append(cards);
     
 
 
