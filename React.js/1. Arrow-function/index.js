@@ -46,7 +46,7 @@
 
 //some random homework:
 
-let boyClub = ["Ivan", "Vova", "Кристина", "Тамара", "Serega"];
+// let boyClub = ["Ivan", "Vova", "Кристина", "Тамара", "Serega"];
 
 // boyClub = boyClub.map((item, i) => {
 //     if (item == "Kristina") { console.log(`${item} is not part of us!`); item = "Boris"; }
@@ -122,48 +122,87 @@ let boyClub = ["Ivan", "Vova", "Кристина", "Тамара", "Serega"];
 // 1)
 let numbers = [240, 26, 420, 343, 997, 536, 268, 950, 457, 341, 912, 923, 883, 14, 253, 79, 264, 55, 510, 790, 330, 321, 764, 252, 30, 626, 983, 261, 617, 18]
 
-// a.
-let odd = numbers.filter((item, i)=>{
-    return item % 2
-})
+// // a.
+// let odd = numbers.filter((item, i)=>{
+//     return item % 2
+// })
 
-let even = numbers.filter((item, i)=>{
-    return item % 2 == 0
-})
-
-
-// b.
-odd = odd.map((item, i)=>{
-    return item**3
-})
+// let even = numbers.filter((item, i)=>{
+//     return item % 2 == 0
+// })
 
 
-// c.
-even = even.map((item, i)=>{
-    return item / (i+1)**2
-})
+// // b.
+// odd = odd.map((item, i)=>{
+//     return item**3
+// })
 
 
-// d.
-let newNumbers = []
-odd.forEach((item, i)=>{
-    newNumbers.push(item);
-})
-even.forEach((item, i)=>{
-    newNumbers.push(item);
-})
+// // c.
+// even = even.map((item, i)=>{
+//     return item / (i+1)**2
+// })
+
+
+// // d.
+// let newNumbers = []
+// odd.forEach((item, i)=>{
+//     newNumbers.push(item);
+// })
+// even.forEach((item, i)=>{
+//     newNumbers.push(item);
+// })
 
 
 
-// 2)
+// // 2)
 serverData = [25, "Hello", 15321, 'a', '2', true, -43.3]
 
-// a. b.
-let number = [], string = [], boolean = []
+// // a. b.
+// let number = [], string = [], boolean = []
 
-serverData.forEach((item, i)=>{
-    console.log(`Element ${item} is a ${typeof item}, so I'll push it to ${typeof item}.`);
-    if (typeof item == "number") number.push(item);
-    if (typeof item == "string") string.push(item);
-    if (typeof item == "boolean") boolean.push(item);
-})
+// serverData.forEach((item, i)=>{
+//     console.log(`Element ${item} is a ${typeof item}, so I'll push it to ${typeof item}.`);
+//     if (typeof item == "number") number.push(item);
+//     if (typeof item == "string") string.push(item);
+//     if (typeof item == "boolean") boolean.push(item);
+// })
+
+
+// Destruction
+// Destructing arrays
+let array = [7, 10, 14, 17, 17, 6, 14, 12, 3, 14, 15, 4, 16, 4, 19];
+
+let arr = ["sdvfbgn", "Biden"]
+// example 1
+// let [a, b] = arr;
+// example 2
+// arr = [1, 2, 3, 4];
+// let [c,,d,] = arr;
+// example 2b
+// let [,d,,e] = arr;
+
+// let [o, e] = [array.filter((item)=>{return item%2}), array.filter((item)=>{return !(item%2)})]
+// console.log(o, e)
+
+// let [odd, even] = [numbers.filter((item)=>{return (item%2)}).map((item)=>{return item**3}), numbers.filter((item)=>{return !(item%2)}).map((item, i)=>{return item/(i+1)**2})]
+// console.log(odd, even, newNumbers)
+
+// let [number, string, boolean] = [serverData.filter((item)=>{console.log(`Element ${item} is a ${typeof item}`);return typeof item == "number"}), serverData.filter((item)=>{console.log(`Element ${item} is a ${typeof item}`);return typeof item == "string"}), serverData.filter((item)=>{console.log(`Element ${item} is a ${typeof item}`);return typeof item == "boolean"})]
+// console.log(number, string, boolean)
+
+// // Spread (...) - Short destruction of an array
+// console.log(...serverData);
+// // Rest (...) - Short construction of an array
+// console.log(...ostatok);
+// let [...newNumbers] = [...odd, ...even]
+
+
+// homework for 31 January
+// I.
+// 1)
+serverData = [24, "User", false, 85, -5, 0, 45, "google.com"]
+
+// 2)
+let [digits, url] = [serverData.filter((item)=>{return typeof item == "number"}), serverData.filter((item)=>{if (typeof item == "string" && item.includes(".com") == true){return item}})];
+console.log(digits, url);
