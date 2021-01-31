@@ -204,5 +204,5 @@ let arr = ["sdvfbgn", "Biden"]
 serverData = [24, "User", false, 85, -5, 0, 45, "google.com"]
 
 // 2)
-let [digits, url] = [serverData.filter((item)=>{return typeof item == "number"}), serverData.filter((item)=>{if (typeof item == "string" && item.includes(".com") == true){return item}})];
-console.log(digits, url);
+let [userInfo, digits, url] = [serverData.filter((item)=>{if (typeof item == "string" && item.includes(".com") == false){return item}}), serverData.filter((item)=>{return typeof item == "number"}), serverData.filter((item)=>{if (typeof item == "string" && item.includes(".com") == true){return item}})];
+console.log(userInfo, digits, url);
