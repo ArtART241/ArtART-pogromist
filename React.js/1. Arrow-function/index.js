@@ -120,7 +120,7 @@
 
 // homework for 24 January
 // 1)
-let numbers = [240, 26, 420, 343, 997, 536, 268, 950, 457, 341, 912, 923, 883, 14, 253, 79, 264, 55, 510, 790, 330, 321, 764, 252, 30, 626, 983, 261, 617, 18]
+// let numbers = [240, 26, 420, 343, 997, 536, 268, 950, 457, 341, 912, 923, 883, 14, 253, 79, 264, 55, 510, 790, 330, 321, 764, 252, 30, 626, 983, 261, 617, 18]
 
 // // a.
 // let odd = numbers.filter((item, i)=>{
@@ -156,7 +156,7 @@ let numbers = [240, 26, 420, 343, 997, 536, 268, 950, 457, 341, 912, 923, 883, 1
 
 
 // // 2)
-serverData = [25, "Hello", 15321, 'a', '2', true, -43.3]
+// serverData = [25, "Hello", 15321, 'a', '2', true, -43.3]
 
 // // a. b.
 // let number = [], string = [], boolean = []
@@ -171,9 +171,9 @@ serverData = [25, "Hello", 15321, 'a', '2', true, -43.3]
 
 // Destruction
 // Destructing arrays
-let array = [7, 10, 14, 17, 17, 6, 14, 12, 3, 14, 15, 4, 16, 4, 19];
+// let array = [7, 10, 14, 17, 17, 6, 14, 12, 3, 14, 15, 4, 16, 4, 19];
 
-let arr = ["sdvfbgn", "Biden"]
+// let arr = ["sdvfbgn", "Biden"]
 // example 1
 // let [a, b] = arr;
 // example 2
@@ -201,8 +201,134 @@ let arr = ["sdvfbgn", "Biden"]
 // homework for 31 January
 // I.
 // 1)
-serverData = [24, "User", false, 85, -5, 0, 45, "google.com"]
+// serverData = [24, "User", false, 85, -5, 0, 45, "google.com"]
 
 // 2)
-let [userInfo, digits, url] = [serverData.filter((item)=>{if (typeof item == "string" && item.includes(".com") == false){return item}}), serverData.filter((item)=>{return typeof item == "number"}), serverData.filter((item)=>{if (typeof item == "string" && item.includes(".com") == true){return item}})];
-console.log(userInfo, digits, url);
+// let [userInfo, digits, url] = [serverData.filter((item)=>{if (typeof item == "string" && item.includes(".com") == false){return item}}), serverData.filter((item)=>{return typeof item == "number"}), serverData.filter((item)=>{if (typeof item == "string" && item.includes(".com") == true){return item}})];
+// console.log(userInfo, digits, url);
+
+
+
+// // Objects / Structures in JS
+// let obj = {}
+
+
+// // add parameters
+// obj["grade"] = 5;
+// obj["name"] = "Demid"
+
+
+// // Get value of parameter
+// obj["grade"]
+// obj.name
+
+
+// // every value can be used in a parameter
+// obj["print"] = (name, grade)=>{
+//     console.log(`Hello I'm ${name} and I have a parameter that says grade =`, grade)
+// }
+
+// // example object
+// obj["innerObj"] = {
+//     "digit": -258,
+//     boolean: true,
+//     print: ()=>{
+//         console.log("I'm a function")
+//     }
+// }
+// obj.innerObj.print();
+
+// console.log(obj);
+
+// let users = [["Anna", "Bob", "Derrik", "Katya"], [14, 12, 15, 24], ["Moscow", "Cloverfield", "Kork", "Praha"]]
+
+// users = {
+//     "name": users[0],
+//     "town": users[2],      //wasnt a good solution
+//     "age": users[1]
+// }
+// console.log(users)
+
+// // Indexing of objects (example, not working)
+// for (let key in users) {
+//     // name of parameter = key
+//     console.log(`User ${key} lives in ${users[key].city}`);
+// }
+
+// object oriented programming (OOP) / classes in JavaScript
+
+// 1) Incapsulation
+// 2) Polyphormism
+// 3) Inheritance
+// 4) Abstraction
+
+
+users = {
+    Administrator: {
+        user1: {
+            username: "Kotik",
+            full_name: "Lukas Jefrey",
+            age: "32",
+            registDate: "01.01.2016",
+            logInDate: "01.02.2021",
+            superuser: true
+        }
+    },
+    Moderator:{
+        user1: {
+            username: "N1ckNack",
+            full_name: "Andrew Garfield",
+            age: "35",
+            registDate: "12.01.2016",
+            logInDate: "02.02.2021",
+            accessLevel: "3"
+        },
+        user2: {
+            username: "HelloKitty",
+            full_name: "Tobey Maguiere",
+            age: "28",
+            registDate: "13.01.2016",
+            logInDate: "03.02.2021",
+            accessLevel: "1"
+        }
+    },
+    User: {
+        user1: {
+            username: "ArtArt",
+            full_name: "Artem Grauberger",
+            age: "16",
+            registDate: "30.09.2017",
+            logInDate: "23.04.2018",
+            isBanned: false
+        },
+        user2: {
+            username: "Blabla",
+            full_name: "Tom Holland",
+            age: "21",
+            registDate: "24.01.2017",
+            logInDate: "08.08.2019",
+            isBanned: true
+        },
+        user3: {
+            username: "KollegeBronsted",
+            full_name: "Elizabeth Olsen",
+            age: "32",
+            registDate: "30.03.2018",
+            logInDate: "31.03.2018",
+            isBanned: false
+        },
+        user4: {
+            username: "Lightwell",
+            full_name: "Robert Downey Jr.",
+            age: "54",
+            registDate: "17.06.2017",
+            logInDate: "23.04.2018",
+            isBanned: false
+        }
+    }
+}
+
+
+
+
+
